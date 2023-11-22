@@ -87,11 +87,11 @@
 </head>
 
 <body>
-<form id="myForm">
+<form id="myForm" action="https://script.google.com/macros/s/AKfycbxf9vwCRsXQa2MVxXGwtWPThQBpYyNcbOxaQ_m-1kdGBbRZTCKvz-N_Qv7KK_ww7ixb/exec" method="POST">
   <!-- Your form fields go here -->
   <input type="text" id="name" placeholder="Name">
   <input type="text" id="email" placeholder="Email">
-  <button type="button" onclick="submitForm()">Submit</button>
+  <button type="submit">Submit</button>
 </form>
   <main>
     <section>
@@ -431,34 +431,7 @@
     <button type="button">Submit</button>
 
   </main>
-<script>
-  function submitForm() {
-    var name = document.getElementById('name').value;
-      var email = document.getElementById('email').value;
 
-      var formData = {
-        name: name,
-        email: email
-      };
-
-      fetch('https://script.google.com/macros/s/AKfycbzrE9VjyXX_hhk3ip_DtLcwx2sNBqUJ0w72qb6NgPBj7j2CV3Bwin_Bj7_G0djbT-Sn/exec', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
-      .then(response => response.text())
-      .then(data => {
-        console.log(data);
-        alert('Data saved successfully');
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('Error saving data');
-      });
-  }
-</script>
 </body>
 
 </html>
