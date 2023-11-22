@@ -87,7 +87,12 @@
 </head>
 
 <body>
-
+<form id="myForm">
+  <!-- Your form fields go here -->
+  <input type="text" name="name" placeholder="Name">
+  <input type="text" name="email" placeholder="Email">
+  <button type="button" onclick="submitForm()">Submit</button>
+</form>
   <main>
     <section>
       <h2>Fill Details</h2>
@@ -426,7 +431,21 @@
     <button type="button">Submit</button>
 
   </main>
-
+<script>
+  function submitForm() {
+    var formData = new FormData(document.getElementById('myForm'));
+    fetch('https://script.google.com/macros/s/AKfycbw63ySFog-6CkeYCy09OWdLfnxGtnRONASldBugXme0CG86TwPeWttc4xXeH7TyOh5w/exec',{ 
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      console.log(data);
+      // Handle the response as needed
+    })
+    .catch(error => console.error('Error:', error));
+  }
+</script>
 </body>
 
 </html>
