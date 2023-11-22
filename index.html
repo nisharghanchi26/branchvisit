@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    main {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 80%;
+    }
+
+    section {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    select {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <title>Questionnaire</title>
+</head>
+
+<body>
+
+  <main>
+    <section>
+      <h2>Fill Details</h2>
+      <label>
+        <span>Enter Employee Code</span>
+        <input type="text" name="ecode">
+      </label>
+      <label>
+        <span>Select Division</span>
+        <select name="lstDiv">
+          <option>Select Division</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Select Branch</span>
+        <select name="lstBranch">
+          <option>Select Branch</option>
+        </select>
+      </label>
+    </section>
+
+
+
+    <section>
+      <h2>Previous Audit Report Reading</h2>
+      <label>
+        <span> JM/MTM ki visit se qabl Mutallika JM/MTM ka Previous Audit Report Read karna </span>
+        <input type="radio" name="q1" value="yes"> Yes
+        <input type="radio" name="q1" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks1" placeholder="Enter your remarks here"></textarea>
+      </label>
+    </section>
+
+    <section>
+      <h2>Physical Cash Check</h2>
+      <label>
+        <span>Physical Cash count karna aur usko Roznamche ke Cash Balance se match karna </span>
+        <input type="radio" name="q2" value="yes"> Yes
+        <input type="radio" name="q2" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks2" placeholder="Enter your remarks here"></textarea>
+      </label>
+    </section>
+
+    <section>
+      <h2>Expense Checking</h2>
+      <label>
+        <span>1. Har Mah ke Expense Voucher ko Roznamche se check karna </span>
+        <input type="radio" name="q3" value="yes"> Yes
+        <input type="radio" name="q3" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks3" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>2. Expense Voucher ko check karte waqt Quotation and Approval ko check karna</span>
+        <input type="radio" name="q4" value="yes"> Yes
+        <input type="radio" name="q4" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks4" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>3. Expense Voucher ke sath mukammal Bills check karna</span>
+        <input type="radio" name="q5" value="yes"> Yes
+        <input type="radio" name="q5" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks5" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+
+      <label>
+        <span>4. Expense Voucher par Nazim Sahab, Khudkafeel and Receiver Sign ko Check karna</span>
+        <input type="radio" name="q6" value="yes"> Yes
+        <input type="radio" name="q6" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks6" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+
+      <label>
+        <span>5. Kitchen aur digar items jo purchase ki gayi hai uske rates par analysis karna, kahi market rate se
+          zyada to koi saman purchase nahi ho raha.</span>
+        <input type="radio" name="q7" value="yes"> Yes
+        <input type="radio" name="q7" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks7" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>6. Iss Mah mai koi asset purchase ki gayi hai to usko physically check karna eg. Calculator, Keyboard,
+          Printer, Bio Metric Machine, CCTV Camara, Furniture etc. etc.</span>
+        <input type="radio" name="q8" value="yes"> Yes
+        <input type="radio" name="q8" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks8" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>7. Filing agar durust na ho to filing & Documentation ko durust karwana</span>
+        <input type="radio" name="q9" value="yes"> Yes
+        <input type="radio" name="q9" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks9" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+
+    </section>
+
+    <section>
+      <h2>Income Checking</h2>
+      <label>
+        <span>1. Tamam Aamdan ko Roznamche mai record kiya hai ya nahi usko check karna</span>
+        <input type="radio" name="q10" value="yes"> Yes
+        <input type="radio" name="q10" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks10" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>2. Agar koi ashya donner ne di hai aur uski raseed issue nahi ki to iss talluk se tarbiyat karna ke hame
+          tamam ashya aur aamdan ki raseed lazmi issue karni hai.</span>
+        <input type="radio" name="q11" value="yes"> Yes
+        <input type="radio" name="q11" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks11" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>3. Jo wajiba amount ya ashya durane mah mosool hui ho to uska Shar'e heela ho chuka hai ya nahi isko check
+          karna.</span>
+        <input type="radio" name="q12" value="yes"> Yes
+        <input type="radio" name="q12" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks12" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>4. Makhsoos mad mai mosool hone wali amount aur ashya ko uski mad mai kharch kiya ja raha hai ya nahi isko
+          check karna </span>
+        <input type="radio" name="q13" value="yes"> Yes
+        <input type="radio" name="q13" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks13" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+
+      <label>
+        <span>5. Bina carbon, incomplete information in raseed ya isi tarah ke deegar muamlat mai agar kami payi jaye to
+          uski tarbiyat karna.</span>
+        <input type="radio" name="q14" value="yes"> Yes
+        <input type="radio" name="q14" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks14" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>6. Jo raseed books maliyat se issue ki hai usko mukammal physically check karna agar che wo blank hi
+          ho.</span>
+        <input type="radio" name="q15" value="yes"> Yes
+        <input type="radio" name="q15" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks15" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>7. Maliyat se agar mahana budget milta hai to usko mukammal income side indaraj kiya hai ya nahi isko
+          check karna</span>
+        <input type="radio" name="q16" value="yes"> Yes
+        <input type="radio" name="q16" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks16" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+    </section>
+
+    <section>
+      <h2>Shar'e Heela Checking</h2>
+      <label>
+        <span>1. Shar'e Heela form ko wajiba amount ke sath tally karna</span>
+        <input type="radio" name="q17" value="yes"> Yes
+        <input type="radio" name="q17" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks17" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>2. Shar'e Heela form ki copy ki filing karwana</span>
+        <input type="radio" name="q18" value="yes"> Yes
+        <input type="radio" name="q18" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks18" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>3. Shar'e Heela form mukammal fill kiya hua hona chahiye agar nahi hai to iss talluk se tarbiyat
+          karna</span>
+        <input type="radio" name="q19" value="yes"> Yes
+        <input type="radio" name="q19" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks19" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+
+    </section>
+
+    <section>
+      <h2>Jamiatul Madina Visit</h2>
+      <label>
+        <span>1. Pure MTM ki physical visit karna </span>
+        <input type="radio" name="q20" value="yes"> Yes
+        <input type="radio" name="q20" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks20" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>2. Physical visit ke dauran ye check karna ke koi ashya/item zaya to nahi ho rahi baaz aukat aisa hota hai
+          ke koi asset aisi hi kahi kone mai kafi time se rakhi hoti hai jiska koi use nahi hota agar wo use aa sakti ho
+          to usko sahi jagah istemal mai lana warna iski Shar'e Rehnumai lekar Sale karwana.</span>
+        <input type="radio" name="q21" value="yes"> Yes
+        <input type="radio" name="q21" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks21" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>3. Bilkhusoos kitchen ki lazmi visit karna aur food items ko store karne ke intizamat ko dekhna. Kitchen
+          ki tamam items achi tarah se organized way mai mehfooz honi chahiye baaz aukat wo niche kahi padi hoti hai
+          usme phir chuhe aur isi tarah ki degar makhlook tasarruf karti hai.</span>
+        <input type="radio" name="q22" value="yes"> Yes
+        <input type="radio" name="q22" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks22" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>4. Oil, Wheat(Gehu), Rice(Chawal) ke dabbe/boriya kahi leakage to nahi hai isko check karna</span>
+        <input type="radio" name="q23" value="yes"> Yes
+        <input type="radio" name="q23" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks23" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+      <label>
+        <span>5. Pake hue khane ki mikdar ko check karna ke kahi khana zaya to nahi ho raha</span>
+        <input type="radio" name="q24" value="yes"> Yes
+        <input type="radio" name="q24" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks24" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+    </section>
+
+    <section>
+      <h2>Khudkafil Attiyat</h2>
+      <label>
+        <span>1. Khudkafil islami bhai ke mahana attiyat ko check karna, usko inki salary ke sath takabul karna, kam
+          attiyat hone ki surat mai attiyat badhane ke talluk se tarbiyat karna </span>
+        <input type="radio" name="q25" value="yes"> Yes
+        <input type="radio" name="q25" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks25" placeholder="Enter your remarks here"></textarea>
+      </label>
+    </section>
+
+    <section>
+      <h2>GAK</h2>
+      <label>
+        <span>GAK mukammal bane hai ya nahi isko check karna, GAK par mutallika zimmedaran ki signature ko check karna,
+          signature na hone ki surat mai hatho hath sign karwana.</span>
+        <input type="radio" name="q26" value="yes"> Yes
+        <input type="radio" name="q26" value="no"> No
+      </label>
+      <label>
+        <span>Remarks: </span>
+        <textarea name="remarks26" placeholder="Enter your remarks here"></textarea>
+      </label>
+
+
+    </section>
+
+
+    <button type="button">Submit</button>
+
+  </main>
+
+</body>
+
+</html>
