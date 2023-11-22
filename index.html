@@ -87,7 +87,7 @@
 </head>
 
 <body>
-<form id="myForm" action="https://script.google.com/macros/s/AKfycbz_VtuoSN6CJXYpHMPS9OY3czyr9lvHHgHB_TRDb5tKDzpoR5JCIjzc4QOYWwZtCyY/exec" method="POST">
+<form id="myForm">
   <!-- Your form fields go here -->
   <input type="text" name="name" placeholder="Name">
   <input type="text" name="email" placeholder="Email">
@@ -433,17 +433,30 @@
   </main>
 <script>
   function submitForm() {
-    var formData = new FormData(document.getElementById('myForm'));
-    fetch('https://script.google.com/macros/s/AKfycbz_VtuoSN6CJXYpHMPS9OY3czyr9lvHHgHB_TRDb5tKDzpoR5JCIjzc4QOYWwZtCyY/exec',{ 
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-      console.log(data);
-      // Handle the response as needed
-    })
-    .catch(error => console.error('Error:', error));
+    var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+
+      var formData = {
+        name: name,
+        email: email
+      };
+
+      fetch('YOUR_DEPLOYED_APP_URL', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => response.text())
+      .then(data => {
+        console.log(data);
+        alert('Data saved successfully');
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Error saving data');
+      });
   }
 </script>
 </body>
